@@ -6,11 +6,11 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const ingredientsList = document.querySelector('#ingredients');
-
 // const ingredientsItem = document.createElement('li');
 // ingredientsItem.textContent = ${element};
 // ingredientsItem.classList.add('item');
+
+const ingredientsList = document.querySelector("#ingredients");
 
 const ingredientsItem = element => {
   const ingredientsItem = document.createElement('li');
@@ -28,15 +28,16 @@ ingredientsList.append(...ingredientsItemsEl);
 
 // const ingredientsList = document.querySelector("#ingredients");
 
-// const ingredientsEls = [];
+// const ingredientsItemsEl = [];
 
 // ingredients.forEach((element) => {
-//   const ingredientsItems = document.createElement("li");
-//   ingredientsItems.classList.add("item");
+//   const ingredientsItem = document.createElement("li");
+//   ingredientsItem.classList.add("item");
 
-//   ingredientsItems.textContent = element;
-//   ingredientsEls.push(ingredientsItems);
+//   ingredientsItem.textContent = element;
+//   ingredientsItemsEl.push(ingredientsItem);
 // });
 
-// ingredientsList.append(...ingredientsEls);
-// // console.log(ingredientsList);
+// ingredientsList.append(...ingredientsItemsEl);
+
+// console.log(ingredientsList);
