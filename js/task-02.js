@@ -24,6 +24,9 @@ console.log(ingredientsItemsEl);
 
 ingredientsList.append(...ingredientsItemsEl);
 
+
+
+
 // second variant
 
 // const ingredientsList = document.querySelector("#ingredients");
@@ -41,3 +44,4 @@ ingredientsList.append(...ingredientsItemsEl);
 // ingredientsList.append(...ingredientsItemsEl);
 
 // console.log(ingredientsList);
+
