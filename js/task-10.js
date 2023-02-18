@@ -16,37 +16,26 @@ function inputValue (value) {
   return (value = inputEl.value);
 }
 
+let boxSize= 30;
+let boxesHTML = "";
 function createBoxes(amount) {
   amount = inputValue();
-  
   if (isNaN(amount) || amount < 1 || amount > 100) {
     alert("Please enter a valid number between 1 and 100.");
     return;
   }
-  const boxesItems = [];
-  let boxSizes = 30;
   for (let i = 0; i < amount; i += 1) {
-    const boxesItem = document.createElement("div");
-    
-    boxesItem.style.width = `${boxSizes}px`;
-    boxesItem.style.height = `${boxSizes}px`;
-    boxSizes += 10;
-    boxesItem.style.backgroundColor = getRandomHexColor();
-    boxesItem.style.margin = '10px';
-    boxesItems.push(boxesItem);
+    boxSize += 10;
+    const boxColor = getRandomHexColor();
+    const boxHTML = `<div style="width: ${boxSize}px; height: ${boxSize}px; background-color: ${boxColor}; margin: 10px;"></div>`;
+    boxesHTML += boxHTML;
   }
-  divBoxes.append(...boxesItems);
-  console.log(divBoxes.children);
+
+  divBoxes.innerHTML = boxesHTML;
 }
 
 function destroyBoxes() {
-  while (divBoxes.firstChild) {
-    // divBoxes.removeChild(divBoxes.firstChild);
-    divBoxes.removeChild(divBoxes.children[0]);
-    console.log(divBoxes.firstChild);
-  }
+  divBoxes.innerHTML = "";
+  boxesHTML = "";
+  boxSize = 30;
 }
-
-// function destroyBoxes() {
-//   divBoxes.innerHTML = "";
-// }

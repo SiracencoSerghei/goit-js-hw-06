@@ -1,30 +1,23 @@
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
-// const ingredientsItem = document.createElement('li');
-// ingredientsItem.textContent = ${element};
-// ingredientsItem.classList.add('item');
 
 const ingredientsList = document.querySelector("#ingredients");
 
-const ingredientsItem = element => {
-  const ingredientsItem = document.createElement('li');
-ingredientsItem.textContent = element;
-ingredientsItem.classList.add('item');
-console.log(ingredientsItem);
-return ingredientsItem;
-}
+const ingredientsItem = (element) => {
+  const ingredientsItem = document.createElement("li");
+  ingredientsItem.textContent = element;
+  ingredientsItem.classList.add("item");
+  return ingredientsItem;
+};
 const ingredientsItemsEl = ingredients.map(ingredientsItem);
-console.log(ingredientsItemsEl);
 
 ingredientsList.append(...ingredientsItemsEl);
-
-
 
 
 // second variant
@@ -42,6 +35,4 @@ ingredientsList.append(...ingredientsItemsEl);
 // });
 
 // ingredientsList.append(...ingredientsItemsEl);
-
-// console.log(ingredientsList);
 
