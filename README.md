@@ -1,15 +1,16 @@
-Acceptance criteria
-goit-js-hw-06 repository created.
-In your submitted homework, there are two links: to the source files and your working page on GitHub Pages.
-All tasks are completed strictly according to the specifications (do not change the original HTML in the task).
-During live page visits, there are no errors or warnings generated in the console.
-Clear and descriptive names of variables and functions.
-Code formatted with Prettier.
-Start files
-Download the startup files with the ready layout and attached script files for each task. Copy them into your project.
+# goit-js-hw-06
+Критерии приема
+Создан репозиторий goit-js-hw-06.
+При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую страницу на GitHub Pages.
+Задания выполнены строго по ТЗ (нельзя изменять исходный HTML задания).
+При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
+Имена переменных и функций понятные, описательные.
+Код отформатирован Prettier.
+Стартовые файлы
+Скачай стартовые файлы с готовой разметкой и подключенными файлами скриптов для каждого задания. Скопируй их себе в проект.
 
-Task 1
-In HTML, there is a list of categories, ul#categories.
+Задание 1
+В HTML есть список категорий ul#categories.
 
 <ul id="categories">
   <li class="item">
@@ -41,11 +42,11 @@ In HTML, there is a list of categories, ul#categories.
   </li>
 </ul>
 
-Write a script that:
+Напиши скрипт который:
 
-Will count and display in the console the number of categories in ul#categories, that is, li.item elements.
-For each li.item element in the ul#categories list, will find and display in the console the element header text (<h2> tag) and the number of elements in the category (all nested <li>).
-As a result, the following messages will be displayed in the console.
+Посчитает и выведет в консоль количество категорий в ul#categories, то есть элементов li.item.
+Для каждого элемента li.item в списке ul#categories, найдет и выведет в консоль текст заголовка элемента (тега <h2>) и количество элементов в категории (всех вложенных в него <li>).
+В результате, в консоли будут выведены такие сообщения.
 
 Number of categories: 3
 
@@ -58,12 +59,12 @@ Elements: 3
 Category: Technologies
 Elements: 5
 
-Task 2
-In HTML, there is an empty ul#ingredients list.
+Задание 2
+В HTML есть пустой список ul#ingredients.
 
 <ul id="ingredients"></ul>
 
-In JavaScript, there is an array of strings.
+В JavaScript есть массив строк.
 
 const ingredients = [
   "Potatoes",
@@ -74,21 +75,21 @@ const ingredients = [
   "Condiments",
 ];
 
-Write a script that, for each element in the ingredients array:
+Напиши скрипт, который для каждого элемента массива ingredients:
 
-Will create a separate <li> element. Be sure to use the document.createElement() method.
-Will add the ingredient name as its text content.
-Will add the item class to the element.
-Then will insert all <li> to the ul#ingredients list in a single operation.
-Task 3
-Write a script to create a gallery of images from an array of data. There is a list, ul.gallery, in HTML.
+Создаст отдельный элемент <li>. Обзательно используй метод document.createElement().
+Добавит название ингредиента как его текстовое содержимое.
+Добавит элементу класс item.
+После чего вставит все <li> за одну операцию в список ul#ingredients.
+Задание 3
+Напиши скрипт для создания галереи изображений по массиву данных. В HTML есть список ul.gallery.
 
 <ul class="gallery"></ul>
 
-Use an array of objects images to create <img> elements nested in <li>. Use template strings and the insertAdjacentHTML() method to create markup.
+Используй массив объектов images для создания элементов <img> вложенных в <li>. Для создания разметки используй шаблонные строки и метод insertAdjacentHTML().
 
-All gallery items must be added to DOM in one insert operation.
-Add at least some gallery design with flexboxes or grids using CSS classes.
+Все элементы галереи должны добавляться в DOM за одну операцию вставки.
+Добавь минимальное оформление галереи флексбоксами или гридами через CSS классы.
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
@@ -104,8 +105,8 @@ const images = [
   },
 ];
 
-Task 4
-The counter consists of a span and buttons, which, when clicked, should increase and decrease its value by one.
+Задание 4
+Счетчик состоит из спана и кнопок, которые, при клике, должны увеличивать и уменьшать его значение на единицу.
 
 <div id="counter">
   <button type="button" data-action="decrement">-1</button>
@@ -113,17 +114,17 @@ The counter consists of a span and buttons, which, when clicked, should increase
   <button type="button" data-action="increment">+1</button>
 </div>
 
-Create a variable, counterValue, that will store the current counter value and initialize it with 0.
-Add listeners for clicks on the buttons; inside them, increase or decrease the value of the counter.
-Update the interface with the new value of the variable counterValue.
-Task 5
-Write a script that, when typing in the input#name-input input (input event), substitutes its current value into span#name-output. If the input is empty, the span should display the "Anonymous" string.
+Создай переменную counterValue в которой будет храниться текущее значение счетчика и инициализируй её значением 0.
+Добавь слушатели кликов на кнопки, внутри которых увеличивай или уменьшай значение счтетчика.
+Обновляй интерфейс новым значением переменной counterValue.
+Задание 5
+Напиши скрипт который, при наборе текста в инпуте input#name-input (событие input), подставляет его текущее значение в span#name-output. Если инпут пустой, в спане должна отображаться строка "Anonymous".
 
 <input type="text" id="name-input" placeholder="Please enter your name" />
 <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 
-Task 6
-Write a script that, when focus on input is lost (blur event), checks its contents for the correct number of entered characters.
+Задание 6
+Напиши скрипт, который при потере фокуса на инпуте (событие blur), проверяет его содержимое на правильное количество введённых символов.
 
 <input
   type="text"
@@ -132,9 +133,9 @@ Write a script that, when focus on input is lost (blur event), checks its conten
   placeholder="Please enter 6 symbols"
 />
 
-The number of characters in the input is specified in its data-length attribute.
-If the number of characters entered is correct, the input's border turns green, or red with a wrong number.
-To add styles, use the valid and invalid CSS classes, which you can find in the task source files.
+Сколько символов должно быть в инпуте, указывается в его атрибуте data-length.
+Если введено подходящее количество символов, то border инпута становится зелёным, если неправильное - красным.
+Для добавления стилей, используй CSS-классы valid и invalid, которые мы уже добавили в исходные файлы задания.
 
 #validation-input {
   border: 3px solid #bdbdbd;
@@ -148,15 +149,15 @@ To add styles, use the valid and invalid CSS classes, which you can find in the 
   border-color: #f44336;
 }
 
-Task 7
-Write a script that responds to changes in the value of input#font-size-control (input event) and changes the inline style of span#text by updating the font-size property. As a result, the text size will change responding to scrollbar dragging.
+Задание 7
+Напиши скрипт, который реагирует на изменение значения input#font-size-control (событие input) и изменяет инлайн-стиль span#text обновляя свойство font-size. В результате при перетаскивании ползунка будет меняться размер текста.
 
 <input id="font-size-control" type="range" min="16" max="96" />
 <br />
 <span id="text">Abracadabra!</span>
 
-Task 8
-Write a script to manage the login form.
+Задание 8
+Напиши скрипт управления формой логина.
 
 <form class="login-form">
   <label>
@@ -170,20 +171,20 @@ Write a script to manage the login form.
   <button type="submit">Login</button>
 </form>
 
-Form submission (form.login-form) must be processed on the submit event.
-The page must not reload when the form is submitted.
-If the form has empty fields, display alert saying that all fields must be filled in.
-As soon as the user has filled in all the fields and submitted the form, collect the field values into an object, where the field name will be the property name and the field value will be the property value. Use the elements property to access form elements.
-Display the object with the entered data in the console and clear the values of the form fields using the reset method.
-Task 9
-Write a script that changes the background colors of the <body> element via inline style when clicking on button.change-color and outputs the color value to span.color.
+Обработка отправки формы form.login-form должна быть по событию submit.
+При отправке формы страница не должна перезагружаться.
+Если в форме есть незаполненные поля, выводи alert с предупреждением о том, что все поля должны быть заполнены.
+Если пользователь заполнил все поля и отправил форму, собери значения полей в обьект, где имя поля будет именем свойства, а значение поля - значением свойства. Для доступа к элементам формы используй свойство elements.
+Выведи обьект с введенными данными в консоль и очисти значения полей формы методом reset.
+Задание 9
+Напиши скрипт, который изменяет цвета фона элемента <body> через инлайн стиль при клике на button.change-color и выводит значение цвета в span.color.
 
 <div class="widget">
   <p>Background color: <span class="color">-</span></p>
   <button type="button" class="change-color">Change color</button>
 </div>
 
-Use the getRandomHexColor function to generate a random color.
+Для генерации случайного цвета используй функцию getRandomHexColor.
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -191,8 +192,8 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-Task 10 (optional)
-Write a script to create and clear a collection of elements. The user enters the number of elements into input and clicks the New button, after which a collection is rendered. When you click on the Clear button, the collection is cleared.
+Задание 10 (выполнять не обязательно)
+Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит количество элементов в input и нажимает кнопку Создать, после чего рендерится коллекция. При нажатии на кнопку Очистить, коллекция элементов очищается.
 
 <div id="controls">
   <input type="number" min="1" max="100" step="1" />
@@ -202,15 +203,15 @@ Write a script to create and clear a collection of elements. The user enters the
 
 <div id="boxes"></div>
 
-Create a createBoxes(amount) function that takes one parameter, a number. The function creates as many <div> as specified in amount and adds them to div#boxes.
+Создай функцию createBoxes(amount), которая принимает один параметр - число. Функция создает столько <div>, сколько указано в amount и добавляет их в div#boxes.
 
-The dimensions of the very first <div> are 30px by 30px.
-Each element after the first one should be 10px wider and higher than the previous one.
-All elements must have a random HEX background color. Use the ready-made getRandomHexColor function to get a color.
+Размеры самого первого <div> - 30px на 30px.
+Каждый элемент после первого, должен быть шире и выше предыдущего на 10px.
+Все элементы должены иметь случайный цвет фона в формате HEX. Используй готовую функцию getRandomHexColor для получения цвета.
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
 
-Create a destroyBoxes() function that clears the contents of div#boxes, thereby removing all created elements.
+Создай функцию destroyBoxes(), которая очищает содержимое div#boxes, тем самым удаляя все созданные элементы.
