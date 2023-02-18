@@ -18,6 +18,11 @@ function inputValue (value) {
 
 function createBoxes(amount) {
   amount = inputValue();
+  
+  if (isNaN(amount) || amount < 1 || amount > 100) {
+    alert("Please enter a valid number between 1 and 100.");
+    return;
+  }
   const boxesItems = [];
   let boxSizes = 30;
   for (let i = 0; i < amount; i += 1) {
